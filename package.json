@@ -1,0 +1,26 @@
+{
+  "name": "cyy",
+  "version": "1.0.0",
+  "description": "* git 操作\r     - 创建项目\r     - 配置git账户\r         1. git config --global user.name '**'\r         2. git config --global user.email '**@**.**'\r     - 下载空项目\r          1. git clone <项目git地址>\r          2. 没有进行配置，需要输入用户名\r          3. 输入密码\r     - 初始化项目\r        1. 创建 README.md\r        2. 提交到本地缓存  git add (.  当前目录下所有变更的文件) |（文件名 指定要提交的文件）\r        3. 提交本地缓存的变更到本地仓库 git commit -m '<描述信息>'\r        4. 提交本地仓库到远程仓库 git push origin(本地分支名) master（远程仓库名）\r        5. 获取远程仓库变更 git pull origin master\r        6. git status 查看本地文件变更情况\r        # readme改动2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.aliyun.com/hd1608/cyy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-stylus": "^2.6.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
