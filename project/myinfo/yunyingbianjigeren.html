@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/yunyingbianjigeren.css">
+</head>
+<body>
+<div class="top">
+    <span class="pic"></span>
+    <p class="top-text">
+        个人资料
+    </p>
+</div>
+<div class="content">
+    <ul>
+        <li class="list1">头像</li>
+        <li class="list2"><i></i></li>
+        <li class="list3"></li>
+    </ul>
+    <ul>
+        <li class="list1">简介</li>
+        <li class="list2"><input type="text" value="以前喜欢一个人，现在喜欢一个人" class="aaa"></li>
+        <li class="list3"></li>
+    </ul>
+    <ul>
+        <li class="list1">企业邮箱/公司总机</li>
+        <li class="list2"><input type="text" value="623423432@qq.com" class="aaa"></li>
+        <li class="list3"></li>
+    </ul>
+    <ul>
+        <li class="list1">联系人</li>
+        <li class="list2"><input type="text" value="张三" class="aaa"></li>
+        <li class="list3"></li>
+    </ul>
+    <ul>
+        <li class="list1">联系方式</li>
+        <li class="list2"><input type="text" value="13831381381" class="aaa"></li>
+        <li class="list3"></li>
+    </ul>
+    <ul>
+        <li class="list1">微信号码</li>
+        <li class="list2"><input type="text" value="18956024163" class="aaa"></li>
+        <li class="list3"></li>
+    </ul>
+</div>
+
+<div class="tupian">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="text">
+    <ul>
+        <li>微信二维码</li>
+        <li>营业执照</li>
+        <li>运营/租赁协议</li>
+    </ul>
+</div>
+
+<div class="photo">
+    <ul>
+        <li>拍照</li>
+        <li>从相册选择</li>
+        <li style="color:orangered">取消</li>
+    </ul>
+</div>
+<div class="zhezhao"></div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".pic").click(function(){
+        history.back();
+    });
+    $(".tupian ul li").click(function(){
+        $(".photo").css("display","block");
+        $(".zhezhao").css("display","block");
+    });
+    $(".photo").click(function(){
+        $(".photo").css("display","none");
+        $(".zhezhao").css("display","none");
+    });
+    $(".aaa").focus(function(){
+        var y = $(this).attr("value");
+        $(this).parent().next().css("background","none");
+        $(this).parent().next().html("完成");
+        $(".list3").click(function(){
+            var x =  $(this).prev().children().val();
+            console.log(x);
+            $(this).prev().children().val(x);
+            $(this).prev().children().attr("value",x);
+            $(this).css("background","url('../../static/img/content_list_right_icon@2x.png') no-repeat center");
+        });
+        $(".aaa").blur(function(){
+            $(this).attr("value",y);
+            $(this).val(y);
+            $(this).parent().next().css("background","url('../../static/img/content_list_right_icon@2x.png') no-repeat center");
+            $(this).parent().next().text("");
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/tabbar.css">
+    <link rel="stylesheet" href="../../static/css/cityselect.css">
+</head>
+<body>
+<div class="box">
+    <div class="search">
+        <span>选择城市</span>
+        <button class="close1">关闭</button>
+    </div>
+    <div style="clear: both"></div>
+    <div class="content">
+        <div class="content1">
+            <div>北京</div>
+        </div>
+        <div class="content2">
+            <div>上海</div>
+        </div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script>
+    $(".close1").click(function(){
+        window.location = "shouye.html";
+    });
+    $(".content").children().click(function(){
+        window.location = "shouye.html";
+    });
+</script>
+</body>
+</html>

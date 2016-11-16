@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/yuyuexiangqing3.css">
+</head>
+<body>
+<div class="top">
+    <span class="pic"></span>
+    <p class="top-text">
+        预约详情
+    </p>
+</div>
+<div class="explain">
+    <p>约见人</p>
+</div>
+<div class="people">
+    <div class="left">
+        <div class="img"></div>
+        <div class="person">
+            <div class="name">你才是张三</div>
+            <div class="shenfen">租户</div>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>
+
+<div class="explain">
+    <p>预约信息</p>
+</div>
+<div class="text_">
+    <div class="left">
+        <div class="name">华旭国际大厦</div>
+        <div class="location">区域：黄埔-人民广场</div>
+        <div class="square">面积：766㎡</div>
+    </div>
+    <div class="right">
+        <div class="type">房型：商务中心</div>
+        <div class="price">单价：￥5.5元/㎡/天起</div>
+    </div>
+</div>
+
+<div class="explain">
+    <p>预约时间</p>
+</div>
+<div class="time">
+    <div class="name">2016-08-08</div>
+</div>
+<div class="explain">
+    <p>预约状态</p>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-10</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周三</p>
+        <p class="zhuangtai">订单成功</p>
+    </div>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-08</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周一</p>
+        <p class="zhuangtai">已接单，待看房</p>
+    </div>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-06</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周六</p>
+        <p class="zhuangtai">等待对方接单</p>
+    </div>
+</div>
+<div class="zhezhao"></div>
+<div class="alert">
+    <p>您确定要拨打电话么？</p>
+    <button class="cancel1">取消</button>
+    <button class="do">确定</button>
+</div>
+<div class="bottom">
+<div class="change">改期</div>
+<div class="deal">达成</div>
+<div class="cancel">取消</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script>
+    $(".people .right").click(function(){
+        $(".alert").css("display","block");
+        $(".zhezhao").css("display","block");
+
+        $(".cancel1").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        });
+        $(".do").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        })
+    });
+    $(".pic").click(function(){
+        window.location = "yuyue.html"
+    });
+
+    $(".change").click(function(){
+        window.location = 'yuyuegaiqi.html'
+    });
+
+    $(".cancel").click(function(){
+        window.location = "../myinfo/quxiaodingdan.html"
+    });
+
+    $(".deal").click(function(){
+        window.location = "uploadhetong.html"
+    })
+
+</script>
+</body>
+</html>

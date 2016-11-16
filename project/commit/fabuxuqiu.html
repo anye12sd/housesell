@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../static/css/fabuxuqiu.css">
+
+</head>
+<body>
+<div class="top">
+    <span class="pic">取消</span>
+    <p class="top-text">
+        发布需求
+    </p>
+    <span class="upload">发布</span>
+</div>
+
+<div class="text"><input type="text" placeholder="周杰伦"></div>
+<div class="number"><input type="number" placeholder="18956214521"></div>
+<div class="textarea"><textarea placeholder="描述一下您的需求，比如黄埔100-200㎡，5-6元/㎡/天，环境好点，底层，临近地铁。"></textarea></div>
+
+<div class="alert">
+    <p>您确定要退出此次发布？</p>
+    <button class="cancel">取消</button>
+    <button class="do">确定</button>
+</div>
+<div class="zhezhao"></div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".pic").click(function(){
+        $(".alert").css("display","block");
+        $(".zhezhao").css("display","block");
+        $(".cancel").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        });
+        $(".do").click(function(){
+            window.location = "../index/shouye.html"
+        })
+    });
+    $(".upload").click(function() {
+        window.location = "fabusuccess.html"
+    })
+</script>
+</body>
+</html>

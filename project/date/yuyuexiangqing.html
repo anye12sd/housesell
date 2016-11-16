@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/yuyuexiangqing.css">
+
+</head>
+<body>
+<div class="top">
+    <span class="pic"></span>
+    <p class="top-text">
+        预约详情
+    </p>
+</div>
+<div class="explain">
+    <p>约见人</p>
+</div>
+<div class="people">
+    <div class="left">
+        <div class="img"></div>
+        <div class="person">
+        <div class="name">你才是张三</div>
+        <div class="shenfen">经纪人</div>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>
+
+<div class="explain">
+    <p>预约信息</p>
+</div>
+<div class="text_">
+    <ul>
+        <li>华旭国际大厦</li>
+    </ul>
+    <ul>
+        <li>区域：黄埔-人民广场</li>
+        <li>房型：商务中心</li>
+        <li>面积：766㎡</li>
+        <li>单价：￥5.5元/㎡/天起</li>
+    </ul>
+    <div style="clear: both"></div>
+</div>
+
+<div class="explain">
+    <p>预约时间</p>
+</div>
+<div class="time">
+    <div class="name">2016-08-08</div>
+</div>
+<div class="explain">
+    <p>预约状态</p>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-10</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周三</p>
+        <p class="zhuangtai">订单成功</p>
+    </div>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-08</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周一</p>
+        <p class="zhuangtai">已接单，待看房</p>
+    </div>
+</div>
+<div class="state">
+    <div class="stage">
+        <p class="date">08-06</p>
+        <p class="day">&nbsp;&nbsp;&nbsp;周六</p>
+        <p class="zhuangtai">等待对方接单</p>
+    </div>
+</div>
+
+<div class="zhezhao"></div>
+<div class="alert">
+    <p>您确定要拨打电话么？</p>
+    <button class="cancel">取消</button>
+    <button class="do">确定</button>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".people .right").click(function(){
+        $(".alert").css("display","block");
+        $(".zhezhao").css("display","block");
+
+        $(".cancel").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        });
+        $(".do").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        })
+    });
+    $(".pic").click(function(){
+        window.location = "yuyue.html"
+    })
+</script>
+</body>
+</html>

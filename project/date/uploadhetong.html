@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/uoloadhetong.css">
+
+</head>
+<body>
+<div class="top">
+    <span class="pic">取消</span>
+    <p class="top-text">
+        上传合同书
+    </p>
+    <span class="upload">上传</span>
+</div>
+
+<div class="content">
+   <p>请按照要求添加图片</p>
+    <div class="first"><i></i>合同第一页</div>
+    <div class="last"><i></i>合同最后一页</div>
+</div>
+
+<div class="alert">
+    <p>您确定要取消本次上传？</p>
+    <button class="cancel">取消</button>
+    <button class="do">确定</button>
+</div>
+<div class="zhezhao"></div>
+
+<div class="alert1">
+    <p>合同书上传成功，后台正在审核</p>
+    <button class="btn">确定</button>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".pic").click(function(){
+        $(".alert").css("display","block");
+        $(".zhezhao").css("display","block");
+        $(".cancel").click(function(){
+            $(".alert").css("display","none");
+            $(".zhezhao").css("display","none");
+        });
+        $(".do").click(function(){
+        })
+    });
+    $(".upload").click(function() {
+        $(".alert1").css("display", "block");
+        $(".zhezhao").css("display", "block");
+        $(".btn").click(function(){
+            window.location = "yuyuexiangqing3.html"
+
+        })
+    })
+</script>
+</body>
+</html>

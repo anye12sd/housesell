@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/woweidenglu.css">
+
+</head>
+<body>
+<div class="top">
+    <p class="top-text">
+        我
+    </p>
+</div>
+<div class="head">
+    <ul>
+        <li class="left">
+            <div></div>
+        </li>
+        <li class="middle">
+            <p>点击登录/注册</p>
+        </li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="number">
+    <ul>
+        <li class="l1"><span style="font-size: 18px;font-weight: bold">0 </span> <p style="display: inline-block">收藏</p></li>
+        <li><span style="font-size: 18px;font-weight: bold">0 </span> <p style="display: inline-block">积分</p></li>
+    </ul>
+</div>
+<div class="content">
+    <ul>
+        <li class="left1">
+            <div></div>
+        </li>
+        <li class="middle">我发布的需求</li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="content">
+    <ul>
+        <li class="left2">
+            <div></div>
+        </li>
+        <li class="middle">我发布的房源</li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="content">
+    <ul>
+        <li class="left3">
+            <div></div>
+        </li>
+        <li class="middle">我预约的房源</li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="content">
+    <ul>
+        <li class="left4">
+            <div></div>
+        </li>
+        <li class="middle">历史交易</li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="content">
+    <ul>
+        <li class="left5">
+            <div></div>
+        </li>
+        <li class="middle">过期房源</li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div style="height:50px;width:1px"></div>
+<div class="bottom">
+    <ul>
+        <li><img src="../../static/img/bottom_nor_icon04@2x.png" alt="" width="25px"><span style="display: block">登录</span></li>
+        <li><img src="../../static/img/bottom_nor_icon03@2x.png" alt="" width="25px"><span style="display: block">预约</span></li>
+        <li><img src="../../static/img/bottom_icon05@2x.png" alt="" width="45px"></li>
+        <li><img src="../../static/img/bottom_nor_icon02@2x.png" alt="" width="25px"><span style="display: block">信息</span></li>
+        <li><img src="../../static/img/bottom_press_icon01@2x.png" alt="" width="25px"><span style="display: block;color:orangered">我</span></li>
+    </ul>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".bottom ul li:nth-of-type(3)").click(function(){
+        $(".box1").css("display","block");
+        $(".zhezhao").css("display","block")
+    });
+    $(".btn3").click(function(){
+        $(".box1").css("display","none");
+        $(".zhezhao").css("display","none")
+
+    });
+    $(".xuqiu1").click(function(){
+        window.location = "../commit/fabufangyuan.html";
+    });
+    $(".fangyuan").click(function(){
+        window.location = "../commit/fabuxuqiu.html";
+    });
+
+    $(".bottom ul li:nth-of-type(2)").click(function(){
+        window.location = '../date/yuyue.html'
+    });
+    $(".bottom ul li:nth-of-type(1)").click(function(){
+        window.location = '../index/shouye.html'
+    });
+    $(".bottom ul li:nth-of-type(4)").click(function(){
+        window.location = '../mess/xiaoxi.html'
+    });
+    $(".head .middle").click(function(){
+        window.location = '../login/login.html'
+    });
+    $(".l1").click(function(){
+        window.location = '../login/login.html'
+    });
+    $(".content .middle").click(function(){
+        window.location = '../login/login.html'
+    });
+</script>
+</body>
+</html>

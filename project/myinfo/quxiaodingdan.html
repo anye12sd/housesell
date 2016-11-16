@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/quxiaodingdan.css">
+
+</head>
+<body>
+<div class="top">
+    <span class="pic"></span>
+    <p class="top-text">
+        取消预约
+    </p>
+</div>
+<div class="explain">
+    <p>预约人</p>
+</div>
+<div class="people">
+    <div class="left">
+        <div class="img"></div>
+        <div class="person">
+            <div class="name">你才是张三</div>
+            <div class="shenfen">租户</div>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>
+
+<div class="explain">
+    <p>预约信息</p>
+</div>
+<div class="text_">
+    <div class="left">
+        <div class="name">华旭国际大厦</div>
+        <div class="location">区域：黄埔-人民广场</div>
+        <div class="square">面积：766㎡</div>
+    </div>
+    <div class="right">
+        <div class="type">房型：商务中心</div>
+        <div class="price">单价：￥5.5元/㎡/天起</div>
+    </div>
+</div>
+
+<div class="explain">
+    <p>预约时间</p>
+</div>
+<div class="time">
+    <div class="name">2016-08-08</div>
+</div>
+<div class="explain">
+    <p>取消原因 (至少选一项)</p>
+</div>
+<div class="select">
+    <div style="position: relative">
+    <div class="checkbox"></div><span class="content">客户不满意</span>
+        <span class="c1"></span>
+    </div>
+    <div style="position: relative">
+    <div class="checkbox"></div><span class="content">已经联系客户，预约取消</span>
+        <span class="c1"></span>
+    </div>
+    <div style="position: relative">
+    <div class="checkbox"></div>
+        <span class="content">其它原因</span>
+        <span class="c1" id="reason"></span>
+    </div>
+    <input type="textarea" placeholder="原因" class="reason">
+
+</div>
+<div class="zhezhao"></div>
+<div class="alert1">
+    <p>您确定要拨打电话么？</p>
+    <button class="cancel1">取消</button>
+    <button class="do">确定</button>
+</div>
+<button class="btn1">确定</button>
+<div class="alert">
+    <p>取消订单成功</p>
+    <button class="btn">确认</button>
+</div>
+<div class="zhezhao"></div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".checkbox").click(function(){
+        if($(this).attr("class") == "checkbox"){
+            $(this).attr("class","checkboxN");
+            $(this).next().next().attr("class","chose");
+        }else{
+            $(this).attr("class","checkbox");
+            $(this).next().next().attr("class","c1");
+        }
+        console.log($(this).next().text())
+        if($(this).next().text() == "其它原因"){
+            $(".reason").css("display","block")
+        }else{
+            $(".reason").css("display","none")
+        }
+    });
+
+    $(".btn1").click(function(){
+        $(".zhezhao").css("display","block");
+        $(".alert").css("display","block");
+    })
+
+    $(".people .right").click(function(){
+        $(".alert1").css("display","block");
+        $(".zhezhao").css("display","block");
+
+        $(".cancel1").click(function(){
+            $(".alert1").css("display","none");
+            $(".zhezhao").css("display","none");
+        });
+        $(".do").click(function(){
+            $(".alert1").css("display","none");
+            $(".zhezhao").css("display","none");
+        })
+    });
+    $(".pic").click(function(){
+        window.location = "../date/yuyuexiangqing3.html"
+    });
+    $(".btn").click(function(){
+        window.location = "../date/yuyuexiangqing3.html"
+    });
+</script>
+</body>
+</html>

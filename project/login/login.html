@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/tabbar.css">
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <span class="pic"></span>
+            <p class="top-text">
+                登录
+            </p>
+    </div>
+    <div class="content">
+        <div class="txt">
+            <i></i><span class="text">帐号：</span><input type="text" placeholder="请输入您的手机号" class="txt1">
+        </div>
+        <div class="pass">
+            <i></i><span class="password">密码：</span><input type="password" placeholder="请输入您的密码" class="pass1">
+        </div>
+    </div>
+
+    <button class="btn" disabled="disabled">登录</button>
+    <div class="bottom1"><span class="regi">注册</span><span class="forget">忘记密码?</span></div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script>
+    $(".txt1").change(function(){
+        $("pass1").val("");
+    });
+    $(".pass1").change(function(){
+        $(".btn").css("background","orange");
+        $(".btn").removeAttr("disabled");
+        $(".btn").click(function(){
+            window.location="../index/shouye.html"
+        });
+    });
+    $(".forget").click(function(){
+        window.location="forget.html"
+    });
+    $(".regi").click(function(){
+        window.location="register.html"
+    });
+    $(".pic").click(function(){
+        history.back();
+    })
+</script>
+
+</body>
+</html>

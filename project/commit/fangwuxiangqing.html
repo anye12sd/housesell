@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/fangwuxiangqing.css">
+</head>
+<body>
+<div class="top">
+    <span class="pic"></span>
+    <img src="../../static/img/banner_img1@2x.png" alt="" height="240px" width="100%">
+    <div class="price">
+        <p style="float: left;margin-left: 5px"><span style="font-size: 20px;color: orangered">￥354615</span><span style="font-size: 14px;color:#fff"> 元/月</span></p>
+        <p style="float: right;margin-right: 5px"><span style="font-size: 20px;color:#fff">1</span><span style="font-size: 14px;color:#fff">/12</span></p>
+    </div>
+</div>
+<div style="height:190px"></div>
+<div class="content">
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">单价</li>
+                <li><span style="color: orangered;font-size: 16px">￥6.5</span><span style="color:#ddd;font-size: 10px;margin-right:5px">元/㎡/天</span></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">面积</li>
+                <li><span style="color: orangered;font-size: 16px;margin-left:55%">175</span><span style="color:#ddd;font-size: 10px;margin-right:5px">㎡</span></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">装修</li>
+                <li><span style="color: #fff;font-size: 16px;font-weight: bold">精装</span></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">最短租期</li>
+                <li><span style="color:#fff;font-size: 16px;margin-left:55%;font-weight: bold">3年</span></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">交付状态</li>
+                <li><span style="color: #fff;font-size: 16px;font-weight: bold">标准交付</span></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">装修免租</li>
+                <li><span style="color:#fff;font-size: 16px;margin-left:55%;font-weight: bold">1个月</span></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">看房时间</li>
+                <li><span style="color: #fff;font-size: 16px;font-weight: bold">8:00-20:00</span></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">是否结佣</li>
+                <li><span style="color:#fff;font-size: 16px;margin-left:55%;font-weight: bold">1个月</span></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="content1">
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">交付时间</li>
+                <li><span style="color: #fff;font-size: 16px;font-weight: bold">2015-06-21(现房)</span></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="out">
+        <li>
+            <ul>
+                <li style="color:#ccc;margin-left:5px;font-size: 14px">付款方式</li>
+                <li><span style="color: #fff;font-size: 16px;font-weight: bold">押一付三(含发票)</span></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="content2">
+    <ul class="out">
+        <li style="margin-top: 20px">
+            <ul>
+                <li><p style="color: #fff;font-size: 16px">该广场是一个集商业，办公的综合楼项目，采用高地双塔楼设计，使
+                    正题外形更具层次感，有变化及更具趣味性。东南角地处世纪大道及张杨路交汇处名称为场地主入口广场。两座塔楼之间采用玻璃顶棚
+                    作为中庭大堂，南北贯通。塔楼A为18层，塔楼B为23层。地下室为三层，用作地下车库和设备用房及人防。</p></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="edit">预约看房</div>
+
+<div class="alert">
+    <p>请选择看房时间</p>
+    <input type="text">
+    <button class="cancel">取消</button>
+    <button class="do">确定</button>
+</div>
+<div class="zhezhao"></div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script>
+    $(".pic").click(function(){
+        history.back();
+    });
+    $(".edit").click(function(){
+        $(".zhezhao").css("display","block");
+        $(".alert").css("display","block");
+        $(".alert input").attr("autofocus","true");
+    });
+$(".cancel").click(function(){
+    $(".zhezhao").css("display","none");
+    $(".alert").css("display","none");
+});
+    $(".do").click(function(){
+        window.location = "yuyuekanfangchenggong.html"
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/jingjiedit.css">
+
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <span class="pic"></span>
+        <p class="top-text">
+            经纪人
+        </p>
+    </div>
+    <div class="explain">
+        <p>必填项</p>
+    </div>
+    <div class="middle">
+        <div class="add">添加头像</div>
+
+        <input type="text" placeholder="姓名" class="company">
+        <input type="text" placeholder="所属公司" class="c_email">
+        <input type="text" placeholder="联系方式" class="connect_people">
+        <input type="text" placeholder="擅长商圈" class="connect_way">
+        <div class="QRcode">名片正面</div>
+    </div>
+
+    <div class="explain">
+        <p>选填项</p>
+    </div>
+    <div class="chose">
+        <div class="xieyi">全国经纪人证书</div>
+    </div>
+    <div class="bottom">
+        <button class="btn">完成</button>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script>
+    $(".pic").click(function(){
+        window.location = '../index/shouye.html';
+    });
+    $(".btn").click(function(){
+        window.location = 'jingjigerenziliao.html';
+    })
+</script>
+</body>
+</html>

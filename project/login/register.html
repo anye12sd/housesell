@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.2/style/weui.min.css">
+    <link rel="stylesheet" href="../../static/css/register.css">
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <span class="pic"></span>
+        <p class="top-text">
+            注册
+        </p>
+    </div>
+    <div class="content">
+        <div class="txt">
+            <i></i><span class="text">帐号：</span><input type="text" placeholder="请输入您的手机号" class="txt1">
+        </div>
+        <div class="txt6">
+            <i></i><span class="yanzheng">验证码：</span><input type="text" placeholder="请输入验证码" class="txt1"><button class="get">获取验证码</button>
+        </div>
+        <div class="pass">
+            <i></i><span class="password1">密码：</span><input type="password" placeholder="请输入您的密码" class="txt1">
+        </div>
+        <div class="pass">
+            <i></i><span class="password2">密码：</span><input type="password" placeholder="请再输入您的密码" class="txt1">
+        </div>
+        <div class="shenfeng">
+            <i></i><span class="shenfen">身份：</span><input type="text" placeholder="经纪人" class="txt5" readonly="readonly"><span class="arrow"></span>
+        </div>
+        <div class="list">
+            <ul>
+                <li>经纪人</li>
+                <li>小业主</li>
+                <li>运营商</li>
+                <li>代理商</li>
+                <li>开发商</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="btn">注册</button>
+    <div class="bottom1"><p style="text-align: center">注册即代表同意<span class="xieyi">《卖房网用户协议》</span></p>
+    </div>
+    <div class="zhezhao"></div>
+
+    <div class="alert1">
+        <p>注册成功，正在跳转</p>
+        <button class="btn1">确定</button>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(".shenfeng span:nth-of-type(2)").click(function(){
+        if($(this).attr("class")=="arrow"){
+            $(this).removeClass("arrow");
+            $(this).addClass("arrow1");
+            $(".list").css("display","block");
+        }else{
+            $(this).removeClass("arrow1");
+            $(this).addClass("arrow");
+            $(".list").css("display","none");
+        }
+    });
+    $(".list ul li").click(function(){
+        var x = $(this).text();
+        $(".txt5").val(x);
+        $(".txt5").attr("shuxing",x);
+        $(".shenfeng span:nth-of-type(2)").removeClass("arrow1");
+        $(".shenfeng span:nth-of-type(2)").addClass("arrow");
+        $(".list").css("display","none");
+        $(".btn").css("background","orangered");
+    });
+    $(".pic").click(function(){
+        window.location = "login.html";
+    });
+    var stop;
+    var timeLeft;
+    function a(){
+        timeLeft --;
+        stop = setTimeout(a,1000);
+        console.log(timeLeft);
+        if(timeLeft <= 0){
+            $(".get").removeAttr("disabled");
+            $(".get").text("获取验证码");
+            $(".get").css("background","orange");
+            clearTimeout(stop);
+        }else{
+            $(".get").attr("disabled","true");
+            $(".get").css("background","#ccc");
+            $(".get").text(timeLeft + "s后重新获取");
+        }
+    }
+    $(".get").click(function(){
+        timeLeft = 5;
+        a();
+    });
+
+    $(".btn").click(function() {
+        $(".alert1").css("display", "block");
+        $(".zhezhao").css("display", "block");
+        $(".btn1").click(function () {
+            var i = $(".txt5").attr("shuxing");
+                if (i == "经纪人"){
+                    window.location = "../myinfo/jingjiedit.html";
+                }else if(i == "小业主"){
+                    window.location = "../myinfo/zhuanzu.html";
+                }else if(i == "运营商"){
+                    window.location = "../myinfo/yunying.html";
+                }
+                else if(i == "代理商"){
+                    window.location = "../myinfo/dailiedit.html";
+                }
+        })
+    })
+</script>
+</body>
+</html>
